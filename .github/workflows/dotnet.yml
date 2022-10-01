@@ -21,9 +21,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet publish -o build.exe
+      run: dotnet publish -o build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: build
-        path: build.exe
+        path: build
