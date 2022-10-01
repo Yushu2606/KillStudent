@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  repository_dispatch:
 
 jobs:
   build:
@@ -20,6 +21,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet publish -o build.exe
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: build.exe
