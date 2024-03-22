@@ -6,6 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PublishAot>true</PublishAot>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebuggerSupport>false</DebuggerSupport>
+    <InvariantGlobalization>true</InvariantGlobalization>
   </PropertyGroup>
 
   <ItemGroup>
